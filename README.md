@@ -82,3 +82,15 @@ Application served via Nginx
 
 Real-world Docker issues (build context, port conflicts) handled
 
+---
+
+## ☸️ Day-2: Kubernetes Deployment
+
+### Kubernetes Objects Used
+- Deployment
+- Service (NodePort)
+
+### Apply Kubernetes Manifests
+```bash
+kubectl apply -f k8s/deployment.yml
+kubectl apply -f k8s/service.yml

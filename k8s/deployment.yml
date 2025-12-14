@@ -14,7 +14,29 @@ spec:
     spec:
       containers:
       - name: devops-container
-        image: ashishmondal420/devops-project:v1
-        imagePullPolicy: Always
+        image: ashishmondal420/devops-project:v2
         ports:
         - containerPort: 80
+
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 10
+

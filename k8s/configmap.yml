@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: devops-config
+data:
+  APP_NAME: "Devops Real Time App"
+  APP_ENV: "dev"

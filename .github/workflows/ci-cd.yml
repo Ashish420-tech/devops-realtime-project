@@ -32,6 +32,4 @@ jobs:
       with:
         version: v1.30.0
 
-    - name: Deploy to Kubernetes
-      run: |
-        kubectl apply -f k8s/
+ 
